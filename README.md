@@ -5,7 +5,7 @@
 
 ## Setup
 
-- `Python 3.6.9+` / `Pytorch 1.7.1` / `ubuntu GPU machine with CUDA 10.1`
+- Environments: `Python 3.6.9+` / `Pytorch 1.7.1` / `ubuntu GPU machine with CUDA 10.1`
 
 ```bash 
 $ virtualenv -p /usr/bin/python3.6 venv
@@ -14,8 +14,17 @@ $ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f h
 $ pip install -r requirements.txt
 ```
 
-- Download BERT Model Checkpoints: Before running the repo you must download the `BERT-Base` and `BERT-Large` checkpoints from [here](https://github.com/google-research/bert#pre-trained-models) and unzip it to some directory `$BERT_DIR`. 
-- Then convert original TensorFlow checkpoints for BERT to a PyTorch saved file by running `bash scripts/prepare_ckpt.sh <path-to-unzip-tf-bert-checkpoints>`. 
+1. Download BERT Model Checkpoints (https://github.com/google-research/bert#pre-trained-models)
+
+```
+bash scripts/download_ckpt.sh <path-to-unzip-tf-bert-checkpoints> <model-name>
+```
+
+2. Convert original TensorFlow checkpoints for BERT to a PyTorch saved file
+
+```
+bash scripts/prepare_ckpt.sh <path-to-unzip-tf-bert-checkpoints>
+```
 
 ## Named Entity Recognition 
 
