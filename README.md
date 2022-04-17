@@ -58,6 +58,15 @@ CUDA_VISIBLE_DEVICES=0 python3 ${REPO_PATH}/tasks/mrc_ner/evaluate.py \
 --path_to_model_checkpoint $OUTPUT_DIR/epoch=2.ckpt
 ```
 
+## Reproducibility
+
+|                         | Paper (F1) | Ours (F1) |
+| ----------------------- | ---------- | --------- |
+| enconll03, focal loss   | 93.08      |           |
+| enconll03, dice loss    | 93.21      |           |
+| enontonotes5, foca loss | 91.12      |           |
+| enontonotes5, dice loss | 92.01      |           |
+
 ## References
 
 - Original github code: https://github.com/ShannonAI/dice_loss_for_NLP
