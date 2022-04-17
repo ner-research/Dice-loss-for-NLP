@@ -60,12 +60,12 @@ CUDA_VISIBLE_DEVICES=0 python3 ${REPO_PATH}/tasks/mrc_ner/evaluate.py \
 
 ## Reproducibility
 
-|                         | Paper (F1) | Ours (F1) |
-| ----------------------- | ---------- | --------- |
-| enconll03, focal loss   | 93.08      |           |
-| enconll03, dice loss    | 93.21      |           |
-| enontonotes5, foca loss | 91.12      |           |
-| enontonotes5, dice loss | 92.01      |           |
+|                          | Paper (F1) | Ours (F1) |
+| ------------------------ | ---------- | --------- |
+| enconll03, focal loss    | 93.08      |           |
+| enconll03, dice loss     | 93.21      |           |
+| enontonotes5, focal loss | 91.12      |           |
+| enontonotes5, dice loss  | 92.01      |           |
 
 ## References
 
