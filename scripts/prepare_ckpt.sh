@@ -7,8 +7,7 @@
 #
 
 # should install tensorflow for loading parameters in Pretrained Models.
-pip install tensorflow
-
+# pip install tensorflow
 
 BERT_BASE_DIR=$1
 
