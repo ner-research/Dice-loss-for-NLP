@@ -5,12 +5,13 @@
 # first create: 2021.02.02
 # file: train.sh
 
-TIME=2021.07.23
+USERHOME=/home/yuho/dice-loss
+TIME=2022.04.17
 FILE_NAME=enconll03_focal
-REPO_PATH=/userhome/xiaoya/mrc-with-dice-loss
+REPO_PATH=${USERHOME}
 MODEL_SCALE=large
-DATA_DIR=/userhome/xiaoya/dataset/en_conll03
-BERT_DIR=/userhome/xiaoya/bert/bert-large-cased
+DATA_DIR=${USERHOME}/datasets/en_conll03
+BERT_DIR=${USERHOME}/cache/bert_cased_large
 
 TRAIN_BATCH_SIZE=18
 EVAL_BATCH_SIZE=1
@@ -50,7 +51,7 @@ elif [[ ${LOSS_TYPE} == "dice" ]]; then
 fi
 echo "DEBUG INFO -> loss sign is ${LOSS_SIGN}"
 
-OUTPUT_BASE_DIR=/userhome/xiaoya/outputs/dice_loss/mrc_ner/${TIME}
+OUTPUT_BASE_DIR=${USERHOME}/outputs/dice_loss/mrc_ner/${TIME}
 OUTPUT_DIR=${OUTPUT_BASE_DIR}/${FILE_NAME}_${MODEL_SCALE}_${TRAIN_BATCH_SIZE}_${MAX_LENGTH}_${LR}_${LR_SCHEDULE}_${BERT_DROPOUT}_${ACC_GRAD}_${MAX_EPOCH}_${GRAD_CLIP}_${WEIGHT_DECAY}_${WARMUP_PROPORTION}_${W_START}_${W_END}_${W_SPAN}_${LOSS_SIGN}
 
 mkdir -p ${OUTPUT_DIR}

@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 
 
+USERHOME=/home/yuho/dice-loss
 FILE_NAME=brain_enonto_dice
-REPO_PATH=/userhome/xiaoya/dice_loss_for_NLP
+REPO_PATH=${USERHOME}
 MODEL_SCALE=base
-DATA_DIR=/userhome/xiaoya/dataset/new_mrc_ner/new_en_onto5
-BERT_DIR=/userhome/xiaoya/bert/bert_cased_large
+DATA_DIR=${USERHOME}/datasets/new_en_onto5
+BERT_DIR=${USERHOME}/cache/bert_cased_large
 
 TRAIN_BATCH_SIZE=12
 EVAL_BATCH_SIZE=1
@@ -46,7 +47,7 @@ elif [[ ${LOSS_TYPE} == "dice" ]]; then
 fi
 echo "DEBUG INFO -> loss sign is ${LOSS_SIGN}"
 
-OUTPUT_BASE_DIR=/userhome/xiaoya/outputs/dice_loss/mrc_ner
+OUTPUT_BASE_DIR=${USERHOME}/outputs/dice_loss/mrc_ner
 OUTPUT_DIR=${OUTPUT_BASE_DIR}/${FILE_NAME}_${MODEL_SCALE}_${TRAIN_BATCH_SIZE}_${MAX_LENGTH}_${LR}_${LR_SCHEDULE}_${BERT_DROPOUT}_${ACC_GRAD}_${MAX_EPOCH}_${GRAD_CLIP}_${WEIGHT_DECAY}_${WARMUP_PROPORTION}_${W_START}_${W_END}_${W_SPAN}_${LOSS_SIGN}
 
 mkdir -p ${OUTPUT_DIR}
