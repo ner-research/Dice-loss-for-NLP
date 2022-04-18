@@ -62,10 +62,10 @@ CUDA_VISIBLE_DEVICES=0 python3 ${REPO_PATH}/tasks/mrc_ner/evaluate.py \
 
 |                          | Paper (F1) | Ours (F1) |
 | ------------------------ | ---------- | --------- |
-| enconll03, focal loss    | 93.08      |           |
-| enconll03, dice loss     | 93.21      |           |
-| enontonotes5, focal loss | 91.12      |           |
-| enontonotes5, dice loss  | 92.01      |           |
+| enconll03, focal loss    | 0.9308     | 0.9234    |
+| enconll03, dice loss     | 0.9321     | 0.9227    |
+| enontonotes5, focal loss | 0.9112     |           |
+| enontonotes5, dice loss  | 0.9201     |           |
 
 ## References
 
