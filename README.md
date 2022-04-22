@@ -60,6 +60,8 @@ CUDA_VISIBLE_DEVICES=0 python3 ${REPO_PATH}/tasks/mrc_ner/evaluate.py \
 
 ## Reproducibility
 
+- [ ] 하드웨어 셋업 맞춘 뒤에 다시 돌려보기
+
 |                          | Paper (F1) | Ours (F1) |
 | ------------------------ | ---------- | --------- |
 | enconll03, focal loss    | 0.9308     | 0.9234    |
